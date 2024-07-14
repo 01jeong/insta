@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { HiOutlineDotsVertical } from 'react-icons/hi';
 import LikeSession from './LikeSession';
+import CommentSession from './CommentSession';
 
 export default function Post({ post }) {
   return (
@@ -25,6 +26,7 @@ export default function Post({ post }) {
         <span className='font-bold mr-2'>{post.username}</span>
         {post.caption}
       </p>
+      <CommentSession id={post.id}/>
     </div>
   );
 }
